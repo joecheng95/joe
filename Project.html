@@ -5,82 +5,47 @@
 	<title>Project with new plugin</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="plugin/jquery.fullpage.css">
-	<style>
-		.full_bg{
-			perspective: 500px;
-			display:flex;
-			flex-wrap: wrap;
-			height:100vh;
-			background-size:cover;
-			background-position:center center;
-		}
-		.card{
-			/*box-shadow:25px 25px 50px;*/
-			height:280px;
-			width:200px;
-			border-radius: 12px;
-			/*overflow:hidden;*/
-			margin:0 auto;
-		}
-		.container{
-			padding:0 120px 0 120px;
-			height:480px;
-			display:flex;
-		}
-		.container1{
-			align-items:flex-end;
-		}
-		.container2{
-			padding-top:25px;
-		}
-		.card img{
-			border-radius:12px;
-			height:280px;
-			width:100%;
-			display:flex;
-			box-shadow:25px 25px 50px;
-		}
-		.transition.flip{
-			transform:rotateY(180deg);
-		}
-		/*ul{
-			margin:0 auto;
-		}*/
-		/*li a{
-			text-align: center
-		}*/
-	</style>
+	<link rel="stylesheet" href="index.css">
+	<link href="plugin/lightbox.css" rel="stylesheet">
 </head>
-<body style="background-color:#181d33">
+<body style="background-color:black">
 	<div id="fullpage">
 		<!-- <nav class="navbar navbar-default navbar-inverse"></nav> -->
 		<div data-0="opacity:1" data-1000="opacity:0" id="page1" class="full_bg section" style= "background-image: url(images/sunshine3.jpg)">
 			<div class="container container1 col-md-12">
 				<div class="card transition">
-					<img class="back img-thumbnail" src="images/tarotback.png">
+						<img class="back img-thumbnail" src="images/tarotback.png">
+						<img class="front img-thumbnail" src="images/tarot2.jpg">
 				</div>
 				<div class="card transition">
 					<img class="back img-thumbnail" src="images/tarotback.png">
+					<img class="front img-thumbnail">
 				</div>
 				<div class="card transition">
 					<img class="back img-thumbnail" src="images/tarotback.png">
+					<img class="front front1 img-thumbnail">
 				</div>
 				<div class="card transition">
 					<img class="back img-thumbnail" src="images/tarotback.png">
+					<img class="front front1 img-thumbnail">
 				</div>
 			</div>
 			<div class="container container2 col-md-12">
 				<div class="card transition">
-					<img class="back img-thumbnail" src="images/tarotback.png">
+					<img class="back img-thumbnail" src="images/tarotback.png" href="images/tarot2.jpg" data-lightbox="image-1" data-title="My caption">
+					<img class="front front1 img-thumbnail">
 				</div>
 				<div class="card transition">
 					<img class="back img-thumbnail" src="images/tarotback.png">
+					<img class="front front1 img-thumbnail">
 				</div>
 				<div class="card transition">
 					<img class="back img-thumbnail" src="images/tarotback.png">
+					<img class="front front1 img-thumbnail">
 				</div>
 				<div class="card transition">
 					<img class="back img-thumbnail" src="images/tarotback.png">
+					<img class="front front1 img-thumbnail">
 				</div>
 			</div>
 		</div>
@@ -92,24 +57,11 @@
   	integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   	crossorigin="anonymous">
 </script>
+<script type="text/javascript" src="plugin/lightbox.min.js"></script>
 <script type="text/javascript" src="plugin/jquery.fullpage.min.js"></script>
 <script type="text/javascript" src="plugin/skrollr.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('#fullpage').fullpage({
-			fadingEffect: true,
-			css3: false,
-			scrollBar: true
-		});
-	});
-	var s = skrollr.init();
-	$('.transition').click(function(){
-		var that=this;
-		$(this).addClass('flip');
-		setTimeout(function(){
-			$(that).removeClass('flip')
-		},500)
-	})
+<script type="text/javascript" src="plugin/jquery.fullpage.extensions.min.js"></script>
+<script type="text/javascript" src="index.js">
 </script>
 </body>
 </html>
