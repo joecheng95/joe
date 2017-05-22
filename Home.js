@@ -33,8 +33,14 @@ setTimeout(function(){
 				},9350);
 setTimeout(function(){
 					$('h1,h2').addClass('bounceInDown')
-					$('.bg').addClass('display')
 				},9850);
+setTimeout(function(){
+					$('.bg').addClass('display')
+				},11850);
+$('h1,h2').realshadow();
+$('h1,h2').realshadow({
+	type: 'text'
+});
 // setTimeout(function(){
 // 					$('h2').addClass('animated hinge');
 // 				},5000);
