@@ -1,0 +1,62 @@
+body{
+	background:url(images/Home.jpg) center center no-repeat;
+	background-size:cover;
+	height:100vh;
+	position:relative;
+}
+.title{
+	position:absolute;
+	top:25%;
+	left:35%;
+}
+h1{
+	animation-duration: 2s;
+	font-size:200px;
+	color:#c31818;
+	font-family: 'Pacifico', cursive;
+}
+.button{
+	position:absolute;
+	top:65%;
+	left:40%;
+}
+h2{
+	animation-duration: 2s;
+	font-size:30px;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	color:rgb(228, 43, 43);
+}
+.bg{
+	display:flex;
+	transition:all 3s;
+	background: black;
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	z-index:100;
+}
+.bg.display{
+	display:none;
+}
+.smoke{
+	opacity:0.2;
+	transition:all 1.5s;
+	min-height:100vh;
+	width:50vw;
+	object-fit: contain;
+}
+.man{
+	opacity:0;
+	transition:all 1s;
+	min-height:100vh;
+	width:50vw;
+	object-fit: contain;
+	/*position: absolute;*/
+}
+.man.animate{
+	opacity:1;
+	transform:translateX(300px);
+}
