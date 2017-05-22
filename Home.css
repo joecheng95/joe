@@ -1,3 +1,6 @@
+a{
+	text-decoration: none !important;
+}
 body{
 	background:url(images/Home.jpg) center center no-repeat;
 	background-size:cover;
@@ -9,18 +12,21 @@ body{
 	top:25%;
 	left:35%;
 }
-h1{
+.title h1{
 	animation-duration: 2s;
 	font-size:200px;
 	color:#c31818;
 	font-family: 'Pacifico', cursive;
+}
+.title h1 a{
+	color:red;
 }
 .button{
 	position:absolute;
 	top:65%;
 	left:40%;
 }
-h2{
+.title h2{
 	animation-duration: 2s;
 	font-size:30px;
 	text-align: center;

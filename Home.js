@@ -35,8 +35,12 @@ setTimeout(function(){
 					$('h1,h2').addClass('bounceInDown')
 				},9850);
 setTimeout(function(){
-					$('.bg').css('display','none')
+					$('.bg').addClass('display')
 				},11850);
+$('h1,h2').realshadow();
+$('h1,h2').realshadow({
+	type: 'text'
+});
 // setTimeout(function(){
 // 					$('h2').addClass('animated hinge');
 // 				},5000);

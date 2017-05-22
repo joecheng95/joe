@@ -40,13 +40,22 @@
 		else{
 			side = "left";
 		}
-			$(this).addClass('rotate'+side);
-			$(this).off('click');
-			$(this).on('click',function(){
-				$(this).addClass('flip'+side);
-				setTimeout(function(){
-					$(that).addClass('trans'+side);
-				},2000);
+		$(this).addClass('rotate'+side);
+		$(this).off('click');
+		$(this).on('click',function(){
+			$(this).addClass('flip'+side).delay(3000).addClass('trans'+side);
+			// .delay(1000).addClass('transdown');
+			// setTimeout(function(){
+			// 	$(that).addClass('trans'+side).delay(5000).hide();
+			// },5000)
+			$(this).off('mouseenter');
+			if($('.flipleft').length+$('.flipright').length===3){
+					//防止user點下第四張牌
+					$('.transition').off('mouseenter').off('click');
+					setTimeout(function(){
+						$.fn.fullpage.moveSectionDown();
+					},1000);
+				}
 				
 				// setTimeout(function(){
 				// $(that).css('transform','scale(1.5)');
@@ -55,7 +64,7 @@
 				// $(that).css('transform','translateY(1000px)');
 				// $(window).animate({scrollTop:1000},'1500');
 				// },2000);
-			});
+	});
 
 		
 	})
@@ -76,14 +85,40 @@
 		// }
 
 		if(imgSelected.indexOf(n)===-1){
-		imgSelected.push(n);
-		that.attr('src','images/tarot' + n + '.jpg')
-	}else{
-		ranNum(that);
-		return;
-	}
+			imgSelected.push(n);
+			that.attr('src','images/tarot' + n + '.jpg')
+			debugger
+		}else{
+			ranNum(that);
+			return;
+		}
 	};
 	$('.front').each(function(){
 		ranNum($(this));
 	});
 
+
+// imgSelected
+// (8) [10, 17, 9, 15, 1, 18, 20, 3]
+// $(this)
+// [div.card.transition.rotateright, context: div.card.transition.rotateright]
+// $(this).index('div')
+// 4
+// $(this).index('.transition')
+// 0
+// $(this).index('.transition')
+// 6
+// imgSelected
+// (8) [10, 17, 9, 15, 1, 18, 20, 3]
+// imgSelected[$(this).index('.transition')]
+// 20
+// var clickedCard = []
+// undefined
+// clickedCard.push()
+// 0
+// clickedCard
+// []
+// clickedCard.push(imgSelected[$(this).index('.transition')])
+// 1
+// clickedCard
+// [20]

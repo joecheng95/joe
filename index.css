@@ -44,7 +44,7 @@
 			backface-visibility:hidden;
 		}
 		.transition{
-			transition:all 0.7s cubic-bezier(0,.98,.42,1.27);
+			transition:all 3s cubic-bezier(0,.98,.42,1.27);
 		}
 		.transition.flipright{
 			transform:rotateY(540deg);
@@ -56,11 +56,14 @@
 		.transition .front{
 			transform:rotateY(180deg);
 		}
+		.transition.transright.transdown,.transition.transleft.transdown{
+			transform:translateY(1000px) rotateY(540deg);
+		}
 		.transition.transright{
-			transform:translateZ(200px) rotateY(540deg);
+			transform:scale(1.2) rotateY(540deg);
 		}
 		.transition.transleft{
-			transform:translateZ(200px) rotateY(-540deg);
+			transform:scale(1.2) rotateY(-540deg);
 		}
 		.front, .back{
 			position:absolute;
