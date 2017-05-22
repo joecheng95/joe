@@ -33,8 +33,10 @@ setTimeout(function(){
 				},9350);
 setTimeout(function(){
 					$('h1,h2').addClass('bounceInDown')
-					$('.bg').addClass('display')
 				},9850);
+setTimeout(function(){
+					$('.bg').css('display','none')
+				},11850);
 // setTimeout(function(){
 // 					$('h2').addClass('animated hinge');
 // 				},5000);

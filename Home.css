@@ -29,7 +29,7 @@ h2{
 }
 .bg{
 	display:flex;
-	transition:all 3s;
+	transition:all 2.5s;
 	background: black;
 	position:fixed;
 	top:0;
