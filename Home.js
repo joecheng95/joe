@@ -37,10 +37,10 @@ setTimeout(function(){
 setTimeout(function(){
 					$('.bg').addClass('display')
 				},11850);
-$('h1,h2').realshadow();
-$('h1,h2').realshadow({
-	type: 'text'
-});
+// $('h1 a p,h2 a p').realshadow();
+// $('h1 a p,h2 a p').realshadow({
+// 	inset:true
+// });
 // setTimeout(function(){
 // 					$('h2').addClass('animated hinge');
 // 				},5000);

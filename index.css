@@ -19,9 +19,11 @@
 			cursor:pointer;
 		}
 		.card.rotateright{
+			transition:all 0.7s cubic-bezier(0,.98,.42,1.27);
 			transform:rotateY(25deg);
 		}
 		.card.rotateleft{
+			transition:all 0.7s cubic-bezier(0,.98,.42,1.27);
 			transform:rotateY(-25deg);
 		}
 		.container{
@@ -43,20 +45,26 @@
 			box-shadow:25px 25px 50px;
 			backface-visibility:hidden;
 		}
-		.transition{
-			transition:all 3s cubic-bezier(0,.98,.42,1.27);
+		.cardtop{
+			z-index:100;
 		}
+		/*.transition{
+			transition:all 0.7s cubic-bezier(0,.98,.42,1.27);
+		}*/
 		.transition.flipright{
+			transition:all 0.7s cubic-bezier(0,.98,.42,1.27);
 			transform:rotateY(540deg);
 			/*transform:translateZ(20px);*/
 		}
 		.transition.flipleft{
+			transition:all 0.7s cubic-bezier(0,.98,.42,1.27);
 			transform:rotateY(-540deg);
 		}
 		.transition .front{
 			transform:rotateY(180deg);
 		}
 		.transition.transright.transdown,.transition.transleft.transdown{
+			transition:all 1.5s linear;
 			transform:translateY(1000px) rotateY(540deg);
 		}
 		.transition.transright{
@@ -77,6 +85,31 @@
 		.front1{
 			top:0;
 			left:0;
+		}
+		.cardtext{
+			margin:20px auto;
+			width:1200px;
+			height:300px;
+			display:flex;
+			position:relative;
+		}
+		.cardselected{
+			position:absolute;
+			height:280px;
+			width:200px;
+			top:10px;
+			display:inline-flex;
+		}
+		.cardtext1,.cardtext2,.cardtext3{
+			font-size:30px;
+			width:1200px;
+			height:280px;
+			position:absolute;
+			left:20%;
+			color:white;
+		}
+		.cardselected img{
+			border-radius: 12px;
 		}
 		/*ul{
 			margin:0 auto;

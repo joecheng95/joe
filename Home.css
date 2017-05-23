@@ -33,6 +33,9 @@ body{
 	font-family: 'Pacifico', cursive;
 	color:rgb(228, 43, 43);
 }
+.title h2 a{
+	color:red;
+}
 .bg{
 	display:flex;
 	transition:all 2.5s;
@@ -65,4 +68,8 @@ body{
 .man.animate{
 	opacity:1;
 	transform:translateX(300px);
+}
+.title h1,h2 p{
+	text-shadow: 10px 10px 25px;
+	opacity:0.9;
 }
