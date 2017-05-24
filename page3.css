@@ -25,6 +25,7 @@ body{
 	height:280px;
 	width:205px;
 	box-shadow:0 0 100px;
+	transform-origin:top;
 }
 .wrapper a img.large{
 	transform:scale(1.2);
