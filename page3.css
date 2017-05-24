@@ -8,7 +8,34 @@ body{
 }
 .wrapper a{
 	margin:40px;
+	text-align:center;
+	text-decoration:none;
+	font-size:20px;
+	width:205px;
+	color:navajowhite;
 }
 .wrapper1 a{
 	margin-top:150px;
+}
+.wrapper img{
+	border-color:aliceblue;
+	padding:0;
+	border:5px solid;
+	border-radius:12px;
+	height:280px;
+	width:205px;
+	box-shadow:0 0 100px;
+}
+.wrapper a img.large{
+	transform:scale(1.2);
+}
+.wrapper a img.normal{
+	transform:scale(1);
+}
+#goPrevious{
+	font-size:20px;
+	position:fixed;
+	left:20px;
+	bottom:20px;
+	opacity:0.8;
 }

@@ -111,6 +111,23 @@
 		.cardselected img{
 			border-radius: 12px;
 		}
+		#goTop{
+			position:fixed;
+			right:20px;
+			bottom:62px;
+			z-index:10;
+			opacity:0;
+		}
+		#goNext{
+			position:fixed;
+			right:20px;
+			bottom:20px;
+			z-index:10;
+			opacity:0.8;
+		}
+		#goTop, #goNext{
+			font-size:20px;
+		}
 		/*ul{
 			margin:0 auto;
 		}*/

@@ -50,6 +50,7 @@
 			},700);
 			setTimeout(function(){
 				$(that).addClass('transdown');
+				$('#goTop').css('opacity', 0.8);
 			},1500);
 			clickedCard.push(imgSelected[$(this).index('.transition')]);
 			var cardNum1="images/" + 'tarot' + clickedCard[0] + '.jpg';
@@ -261,7 +262,17 @@
 		ranNum($(this));
 	});
 
+	$('#goTop').click(function(){
+		$('body').animate({
+			scrollTop:0
+		},500);
+		// $(this).css('opacity', 0)
+	});
 
+	$('.cardselected').realshadow();
+	$('.cardselected').realshadow({
+		type:'text'
+	});
 // imgSelected
 // (8) [10, 17, 9, 15, 1, 18, 20, 3]
 // $(this)
